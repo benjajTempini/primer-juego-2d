@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PrimerJuego2D"
-run/main_scene="res://control.tscn"
+run/main_scene="uid://dn6cch5k34of2"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
