@@ -54,8 +54,6 @@ curve = SubResource("Curve2D_c01mt")
 position = Vector2(0, -1)
 rotation = 0.004184076
 
-[node name="HUD" parent="." instance=ExtResource("4_rarhs")]
-
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,6 +68,8 @@ autoplay = true
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_vcsgt")
+
+[node name="HUD" parent="." instance=ExtResource("4_rarhs")]
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
