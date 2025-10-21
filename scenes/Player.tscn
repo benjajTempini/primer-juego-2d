@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn6cch5k34of2"]
+[gd_scene load_steps=8 format=3 uid="uid://d3m0a66owlq3g"]
 
-[ext_resource type="Texture2D" uid="uid://bqnx8qw1iou7w" path="res://assets/sprites/playerGrey_up1.png" id="1_mdl7e"]
-[ext_resource type="Script" uid="uid://jkj6mto8bj3u" path="res://scripts/player.gd" id="1_qu4a1"]
-[ext_resource type="Texture2D" uid="uid://2nw67b6xe5gt" path="res://assets/sprites/playerGrey_up2.png" id="2_qu4a1"]
-[ext_resource type="Texture2D" uid="uid://dyfxl1f60qhj" path="res://assets/sprites/playerGrey_walk1.png" id="3_70d11"]
-[ext_resource type="Texture2D" uid="uid://dyol5da5pfi21" path="res://assets/sprites/playerGrey_walk2.png" id="4_cw2d6"]
+[ext_resource type="Texture2D" uid="uid://ydr4u243uaq3" path="res://sprites/sprites/playerGrey_up1.png" id="1_mdl7e"]
+[ext_resource type="Script" uid="uid://x5nrj7d1ytl7" path="res://scripts/player.gd" id="1_qu4a1"]
+[ext_resource type="Texture2D" uid="uid://cny248s3xn5p" path="res://sprites/sprites/playerGrey_up2.png" id="2_qu4a1"]
+[ext_resource type="Texture2D" uid="uid://ycmm52kchae3" path="res://sprites/sprites/playerGrey_walk1.png" id="3_70d11"]
+[ext_resource type="Texture2D" uid="uid://b5u7imfcxdcce" path="res://sprites/sprites/playerGrey_walk2.png" id="4_cw2d6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_khinc"]
 animations = [{
@@ -31,9 +31,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bruh7"]
-radius = 23.0
-height = 60.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdl7e"]
+radius = 25.0
+height = 64.0
 
 [node name="Player" type="Area2D"]
 script = ExtResource("1_qu4a1")
@@ -42,9 +42,9 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_khinc")
-animation = &"walk"
+animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_bruh7")
+shape = SubResource("CapsuleShape2D_mdl7e")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
